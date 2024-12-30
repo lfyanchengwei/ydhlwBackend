@@ -1,18 +1,17 @@
-package com.ydhlw.common.config;
+package com.ydhlw.common.utils;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-public class BCryptConfig {
-    private BCryptPasswordEncoder bcryptPasswordEncoder = new BCryptPasswordEncoder();
+public class BCryptUtil {
+    private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-    // 加密；返回加密后字符串
-    public String encodePassword(String password) {
-        return bcryptPasswordEncoder.encode(password);
+    // 加密密码
+    public static String encode(String rawPassword) {
+        return encoder.encode(rawPassword);
     }
 
-    // 比较；返回true或false
-    // rawPassword: 原始密码；encodedPassword: 加密后字符
-    public boolean matchesPassword(String rawPassword, String encodedPassword) {
-        return bcryptPasswordEncoder.matches(rawPassword, encodedPassword);
+    // 验证密码
+    public static boolean matches(String rawPassword, String encodedPassword) {
+        return encoder.matches(rawPassword, encodedPassword);
     }
 }

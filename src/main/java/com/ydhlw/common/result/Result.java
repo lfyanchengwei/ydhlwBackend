@@ -1,4 +1,4 @@
-package com.jtglxt.common.result;
+package com.ydhlw.common.result;
 
 import lombok.Data;
 

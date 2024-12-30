@@ -1,7 +1,7 @@
 package com.ydhlw.common.exception;
 
-public class InvalidCredentialsException extends RuntimeException {
-    public InvalidCredentialsException(String message) {
+public class LoginErrorException extends RuntimeException {
+    public LoginErrorException(String message) {
         super(message);
     }
 }

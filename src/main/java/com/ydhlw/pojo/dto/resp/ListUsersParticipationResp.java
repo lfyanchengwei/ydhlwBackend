@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ListUserselfRegistrationsResp {
+public class ListUsersParticipationResp {
     private Integer eventId;
     private String picUrl;
     private String title;

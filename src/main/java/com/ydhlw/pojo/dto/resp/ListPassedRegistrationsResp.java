@@ -9,8 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ListPassedRegistration {
+public class ListPassedRegistrationsResp {
+    private Integer registrationId;
+    private Integer userId;
     private String username;
     private String phone;
     private String email;
+    private String status;
 }

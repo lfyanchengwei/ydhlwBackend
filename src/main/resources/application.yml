@@ -1,0 +1,39 @@
+#配置mybatis-plus
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ydhlw?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    #username: ydhlw
+    username: root
+    password: 123456
+  mybatis-plus:
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.ydhlw.pojo.dao.entity
+    configuration:
+      map-underscore-to-camel-case: true
+  # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+file:
+  upload-dir: ./uploads
+
+server:
+  address: 0.0.0.0
+  port: 8883                     # 应用启动端口
+
+# 跨域配置
+cors:
+  # 允许跨域的域名
+  allow-origins:
+    - http://localhost:8081
+    - http://localhost:8080
+    - http://localhost:8883
+    - http://localhost:8884
+    - http://localhost:8885
+    - http://10.199.132.22
+    - http://154.8.140.108/
+    - http://localhost:5173
+    - http://154.8.140.108:8884
+    - http://154.8.140.108:8885
